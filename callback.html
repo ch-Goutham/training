@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JavaScript Callbacks:
+//A call back function is a function that is passed argument to another function
+//Example : 1
+
+function greets(name,callback){
+    console.log(`Hello, ${name}!`)
+    callback();
+//This calls the callback function after greeting
+}
+
+function goodBye(){
+console.log("GoodBye")
+}
+greets("sam", goodBye)
+// call greet and pass say GoodBye as the callback
+
+//Using an anonymous function as a callback
+    //Example : 2
+
+    function wish(name, callback){
+        console.log("Welcome" + name);
+        callback();
+    }
+
+    wish("To Javascript", function(){
+        console.log("goodbye")
+    })
+    //anonymous function as callback
+    //Ex: we didn't pass a named function like(goodbye), Instead of that we defined an anonymous function directly
+    //with in the greet function
+
+    //Example : 4 
+    //Asynchronous callback eith setTimeout
+
+    function fetchData(callback){
+        console.log("Fetching data...");
+        setTimeout(function(){
+            console.log("Data Fetched")
+            callback()
+        },2000)
+        
+    }
+
+    function processData(){
+        console.log("processing the fetched data..")
+    }
+    fetchData(processData);
+
+    //Example : 5
+    //using a callback with array methods(map)
+
+    const nums = [1,2,3,4,5]
+    const d = nums.map(function(num){
+        return num*2
+    })
+    console.log(d)
+//Ex: map() is a built in array method that callback function to process each item in array
+//the callback here doubles each number (num*2) and will result a new array with doubled values
+
+//User registration Scenario based:
+//Ex:
+ function registerUser(username, email, callback){
+    console.log("registering user" + username);
+    setTimeout(function(){
+        console.log("user" +" " + username + " " + "registered successfully");
+        callback(email);
+    }, 2000);
+ }
+ function sendWelcomeEmail(email){
+    console.log("sending welcome email to" + email)
+ }
+ registerUser("abc", "abc123@gmail.com", sendWelcomeEmail)
+
+    </script>
+</body>
+</html>
