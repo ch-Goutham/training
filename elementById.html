@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Element By Id</h2>
+    <h3>Addition of two numbers</h3>
+    <button type="button" onclick="add(2,3)">Add</button>
+    <p id="res"></p>
+
+    <script>
+        function add(a,b){
+          let result = a+b;
+          document.getElementById("res").innerHTML = result
+        }
+    </script>
+</body>
+</html>
