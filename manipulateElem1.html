@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ex:1 -->
+    <!-- Removing a child element from a parent node: -->
+    <h1>Removing a child element from a parent node:</h1>
+    <ul>
+        <li>Hi</li>
+        <li>Hello</li>
+        <li>Welcome</li>
+    </ul>
+
+    <!-- Ex:2 -->
+<!-- To append a new element: -->
+<!-- append()- To append a new element to parent node -->
+
+          <div id ="a">
+          <h1>To</h1>
+          <h1>JavaScript</h1>
+          </div>
+
+          <div id="b">
+            <h1>Hai</h1>
+            <h1>Helloo</h1>
+          </div>
+
+
+    <script>
+        //Ex:1
+        const ul = document.querySelector('ul')
+        const lists = document.querySelectorAll('li')
+        for(const list of lists){
+            console.log(`Removing: ${list.textContent}`)
+            ul.removeChild(list)
+        }
+
+        //Ex:2
+
+        let n = document.createElement("h2")
+        n.textContent = "new Content"
+        //get the parent element
+       let p = document.getElementById("b")
+       console.log(p.innerText)
+       //append the new element to the parent element
+       p.appendChild(n)
+       //log the inner Text of the parent
+       console.log(p)
+       console.log(p.innerText)
+
+    </script>
+</body>
+</html>
