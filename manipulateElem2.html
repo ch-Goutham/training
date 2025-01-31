@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Insert Before -->
+     <!-- Ex:1 -->
+    <div id="a">
+        <h1 id="hi">Hi</h1>
+        <h1 id="he">Hello</h1>
+      
+    </div>
+    <div id="b">
+        <h2>Welcome</h2>
+        <h2>To javascript</h2>
+    </div>
+
+    <!-- Ex:2 -->
+
+    <!-- <div id="c">
+        <h2 id="hi">Hi</h2>
+        <h1>Hello</h1>
+    </div>
+    <div id="d">
+        <h2>Welcome</h2>
+        <h2>To javascript</h2>
+    </div> -->
+    <script>
+        //Ex:1
+        let n = document.createElement("h2")
+        n.textContent="Language"
+        let p = document.getElementById('a')
+        let l = document.getElementById('he')
+        p.insertBefore(n, l)
+        console.log(p)
+
+     //EX:2
+  
+     let nn = document.createElement("h1")
+     nn.textContent="Goutham"
+     let pp = document.getElementById('a')
+     let ll = document.getElementById('hi')
+     pp.insertBefore(nn, ll)
+     console.log(pp)
+
+     //To Remove an Element:
+      let b = document.getElementById("b")
+     
+      b.remove()
+
+      //To Remove an Child Element:
+      let n1 = document.getElementById("a")
+      let c = document.getElementById("he")
+      console.log(c)
+      n1.removeChild(c)
+
+      //Replace
+
+      let n2 = document.createElement('h1')
+      n2.innerText="version It"
+
+      let p1 =document.getElementById("a")
+      //replace  all the children with version Fit
+      p1.replaceChildren(n2)
+      console.log(p1)
+
+
+    </script>
+</body>
+</html>
