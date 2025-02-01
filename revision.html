@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Voting Eligibility System
+
+        let age = prompt("Enter the age");
+        let citizen = prompt("Enter the citizenship");
+        let cTest = prompt("Citizenship result");
+        
+        if((age >= 18) && (citizen=="Indian"||cTest =="Passed")){
+            document.write("Can eligible for voting");
+        }
+        else{
+            document.write("Cannot vote");
+        }
+
+        //Discount Eligibility 
+
+        let cust = parseInt(prompt("Enter customer spending"));
+        let custType = prompt("Enter customer type") == 'yes';
+        let dis = 0;
+        if(cust>100){
+            dis = 20;
+            document.write("Gets 20% dicount")
+        }else if(cust>50){
+            dis = 10;
+        }
+        if(custType){
+            di = dis+=5;
+        }
+        console.log("The customer is eligible for a " + dis + "% discount");
+
+        let finalamount = cust - (cust * dis / 100);
+        console.log("final amount:" + finalamount)
+    
+    </script>
+</body>
+</html>
